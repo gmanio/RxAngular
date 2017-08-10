@@ -1,0 +1,40 @@
+:host { background: sandybrown }
+.article { padding: 10px 0 20px; }
+.search_faq {
+  transform-origin: 50% 0;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(-90deg);
+  animation: show-faq-input1 1s forwards;
+  animation-delay: 2s; }
+@keyframes show-faq-input1 {
+  0% {
+    transform: perspective(1000px) rotateX(-90deg);
+  }
+  40% {
+    transform: perspective(1000px) rotateX(45deg);
+  }
+  60% {
+    transform: perspective(1000px) rotateX(-20deg);
+  }
+  70% {
+    transform: perspective(1000px) rotateX(15deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateX(-8deg);
+  }
+  85% {
+    transform: perspective(1000px) rotateX(8deg);
+  }
+  95% {
+    transform: perspective(1000px) rotateX(-4deg);
+  }
+  97% {
+    transform: perspective(1000px) rotateX(3deg);
+  }
+  99% {
+    transform: perspective(1000px) rotateX(-1deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0);
+  }
+}

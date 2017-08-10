@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "6.9"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install -g firebase-tools
+  - npm install -g @angular/cli@latest
+
+script:
+  - ng build --aot --prod --build-optimizer
+
+after_success:
+  - firebase deploy --token 1/hQgYfk1pN9vH0dCHw43qF6f-ztI79bQ9yXl2mLislKw
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
