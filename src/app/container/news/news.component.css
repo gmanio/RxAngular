@@ -4,8 +4,7 @@
   transform-origin: 50% 0;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateX(-90deg);
-  animation: show-faq-input1 1s forwards;
-  animation-delay: 2s; }
+  animation: show-faq-input1 3s forwards; }
 @keyframes show-faq-input1 {
   0% {
     transform: perspective(1000px) rotateX(-90deg);

@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, HostListener, Input, OnInit } from '@angular/core';
-import { slideInOutAnimation } from '../../animation/slide.animation';
+import { AfterViewInit, ChangeDetectorRef, Component, HostListener, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { from } from 'rxjs/observable/from';
 import { Observable } from 'rxjs/Observable';
+import { slideInOutAnimation } from '../../../component/animation/slide.animation';
+import 'rxjs/add/observable/timer';
 
 @Component({
   selector: 'app-about',
@@ -16,6 +17,7 @@ import { Observable } from 'rxjs/Observable';
     '(@slideInOutAnimation.done)': 'animationDone($event)'
   }
 })
+
 export class AboutComponent implements OnInit, AfterViewInit {
   public results: Observable<any>;
 
@@ -25,7 +27,8 @@ export class AboutComponent implements OnInit, AfterViewInit {
   }
 
   constructor(private router: Router,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private cd: ChangeDetectorRef) {
   }
 
   ngOnInit() {
@@ -33,6 +36,12 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     console.log('AfterViewInit');
+    // this.results = this.http.get('https://node-hnapi.herokuapp.com/news?page=1');
+    // this.cd.detectChanges();
+    // Observable.timer(3000).subscribe(() => {
+    //   this.results = this.http.get('https://node-hnapi.herokuapp.com/news?page=1');
+    //   this.cd.detectChanges();
+    // });
   }
 
   animationStart($event) {
@@ -47,11 +56,6 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
     if ( $event.fromState === 'void' ) {
 
-      this.http.get('https://node-hnapi.herokuapp.com/news?page=1').subscribe((data: Array<any>) => {
-        // Read the result field from the JSON response
-
-        this.results = from([data]);
-      });
     }
   }
 }

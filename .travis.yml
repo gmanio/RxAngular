@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "6.9"
+  - "6.10.3"
 
 branches:
   only:
@@ -11,7 +11,7 @@ before_script:
   - npm install -g @angular/cli@latest
 
 script:
-  - ng build --aot --prod --build-optimizer
+  - ng build --aot --prod --build-optimizer -sourcemap
 
 after_success:
   - firebase deploy --token 1/hQgYfk1pN9vH0dCHw43qF6f-ztI79bQ9yXl2mLislKw

@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { slideInOutAnimation } from '../animation/slide.animation';
 import { Router } from '@angular/router';
+import { slideInOutAnimation } from '../../component/animation/slide.animation';
 
 @Component({
   selector: 'app-setting',

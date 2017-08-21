@@ -1,7 +1,7 @@
 import * as ScrollReveal from '../../../assets/vendor/scrollreveal/scrollreveal.min.js';
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
-import { slideInOutAnimation } from '../animation/slide.animation';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { slideInOutAnimation } from '../../component/animation/slide.animation';
 
 @Component({
   selector: 'app-news',
@@ -39,6 +39,6 @@ export class NewsComponent implements OnInit, AfterViewInit {
   }
 
   goHome() {
-    this.router.navigate(['home']);
+    this.router.navigate(['editor']);
   }
 }

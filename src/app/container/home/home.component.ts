@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { slideInOutAnimation } from '../animation/slide.animation';
+import { slideInOutAnimation } from '../../component/animation/slide.animation';
 
 @Component({
   templateUrl: './home.component.html',
