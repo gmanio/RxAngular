@@ -2,6 +2,22 @@ import * as ScrollReveal from '../../../assets/vendor/scrollreveal/scrollreveal.
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { slideInOutAnimation } from '../../component/animation/slide.animation';
+import { HackerNewsService } from '../../service/hacker-news.service';
+import { Observable } from 'rxjs/Observable';
+
+export interface FeedItem {
+  id: number;
+  title: string;
+  points?: number | null;
+  user?: string | null;
+  time: number;
+  time_ago: string;
+  comments_count: number;
+  type: string;
+  url?: string;
+  domain?: string;
+}
+
 
 @Component({
   selector: 'app-news',
@@ -14,9 +30,11 @@ import { slideInOutAnimation } from '../../component/animation/slide.animation';
 })
 
 export class NewsComponent implements OnInit, AfterViewInit {
+  public responseData: Observable<FeedItem>;
   public sr: any;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private apiService: HackerNewsService) {
     this.sr = ScrollReveal({
       reset: true,
       duration: 2000,
@@ -41,4 +59,13 @@ export class NewsComponent implements OnInit, AfterViewInit {
   goHome() {
     this.router.navigate(['editor']);
   }
+
+  fetchNews() {
+    this.responseData = this.apiService.fetchNEWS();
+  }
+
+  fetchJobs() {
+    this.responseData = this.apiService.fetchJOBS();
+  }
 }
+
