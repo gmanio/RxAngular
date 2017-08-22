@@ -11,7 +11,13 @@ export class SettingComponent implements OnInit {
   hoverTab(event) {
     if ( event ) {
       const elTarget = event.currentTarget;
-      console.log(elTarget);
+      const elBar = this.el.nativeElement.querySelector('.animated_bg_bar');
+      console.log(elTarget.offsetLeft);
+      console.log(elTarget.offsetWidth);
+      console.log(elBar);
+
+      elBar.style.left = `${elTarget.offsetLeft}px`;
+      elBar.style.width = `${elTarget.offsetWidth}px`;
       elTarget.classList.add('on');
     }
 
