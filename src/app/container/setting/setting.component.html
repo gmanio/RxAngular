@@ -1,3 +1,25 @@
 <p>
   setting works!
 </p>
+<div class="wrap_tab">
+  <ul>
+    <li (mouseover)="hoverTab($event)" (mouseleave)="hoverTab($event)">
+      <a href="">한글다섯글자탭</a>
+      <span class="bar"></span>
+    </li>
+    <li (mouseover)="hoverTab($event)" (mouseleave)="hoverTab($event)">
+      <a href="">한탭</a>
+      <span class="bar"></span>
+    </li>
+    <li (mouseover)="hoverTab($event)" (mouseleave)="hoverTab($event)">
+      <a href="">한글탭</a>
+      <span class="bar"></span>
+    </li>
+    <li (mouseover)="hoverTab($event)" (mouseleave)="hoverTab($event)">
+      <a href="">한글글자탭</a>
+      <span class="bar"></span>
+    </li>
+  </ul>
+  <span class="animated_bg_bar"></span>
+</div>
+<app-list></app-list>

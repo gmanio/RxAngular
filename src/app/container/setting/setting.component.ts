@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,12 +8,27 @@ import { Router } from '@angular/router';
 })
 
 export class SettingComponent implements OnInit {
-  @HostListener('click', ['$event'])
-  onWindowClick(event) {
-    this.router.navigate(['news']);
+  hoverTab(event) {
+    if ( event ) {
+      const elTarget = event.currentTarget;
+      console.log(elTarget);
+      elTarget.classList.add('on');
+    }
+
+    if ( event.type === 'mouseleave' ) {
+      const elTarget = event.currentTarget;
+
+      elTarget.classList.remove('on');
+    }
   }
 
-  constructor(private router: Router) {
+  // @HostListener('click', ['$event'])
+  // onWindowClick(event) {
+  //   this.router.navigate(['news']);
+  // }
+
+  constructor(private router: Router,
+              private el: ElementRef) {
   }
 
   ngOnInit() {
