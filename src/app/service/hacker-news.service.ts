@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const API = {
+const Api = {
   NEWS: '/api/v0/news.json',
   NEWEST: '/api/v0/newest.json',
   ASK: '/api/v0/ask.json',
@@ -20,22 +20,22 @@ export class HackerNewsService {
   }
 
   public fetchNEWS() {
-    return this.request(API.NEWS);
+    return this.request(Api.NEWS);
   }
 
   public fetchNEWEST() {
-    return this.request(API.NEWEST);
+    return this.request(Api.NEWEST);
   }
 
   public fetchASK() {
-    return this.request(API.NEWS);
+    return this.request(Api.NEWS);
   }
 
   public fetchSHOW() {
-    return this.request(API.SHOW);
+    return this.request(Api.SHOW);
   }
 
   public fetchJOBS() {
-    return this.request(API.JOBS);
+    return this.request(Api.JOBS);
   }
 }

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { RootRouter } from './app.routes';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -11,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent
   ],
   imports: [
-    BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     RootRouter,

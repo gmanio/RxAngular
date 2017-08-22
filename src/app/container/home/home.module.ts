@@ -12,7 +12,10 @@ import { HackerNewsService } from '../../service/hacker-news.service';
     FormsModule,
     HomeRouter
   ],
-  declarations: [HomeComponent, AboutComponent],
+  declarations: [
+    HomeComponent,
+    AboutComponent
+  ],
   providers: [HackerNewsService]
 })
 export class HomeModule {

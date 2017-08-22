@@ -1,15 +1,9 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { slideInOutAnimation } from '../../component/animation/slide.animation';
 
 @Component({
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  animations: [slideInOutAnimation],
-  host: {
-    '[@slideInOutAnimation]': '',
-    '(@slideInOutAnimation.done)': 'animationDone($event)'
-  }
+  styleUrls: ['./home.component.css']
 })
 
 export class HomeComponent implements AfterViewInit {

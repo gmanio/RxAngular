@@ -1,7 +1,6 @@
 import * as ScrollReveal from '../../../assets/vendor/scrollreveal/scrollreveal.min.js';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { slideInOutAnimation } from '../../component/animation/slide.animation';
 import { HackerNewsService } from '../../service/hacker-news.service';
 import { Observable } from 'rxjs/Observable';
 
@@ -18,15 +17,10 @@ export interface FeedItem {
   domain?: string;
 }
 
-
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css'],
-  animations: [slideInOutAnimation],
-  host: {
-    '[@slideInOutAnimation]': ''
-  }
+  styleUrls: ['./news.component.css']
 })
 
 export class NewsComponent implements OnInit, AfterViewInit {
