@@ -1,13 +1,12 @@
+import * as Quill from 'quill';
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import * as Quill from 'quill';
 
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
   styleUrls: [
-    './editor.component.css',
-    './quill.snow.css'
+    './editor.component.css'
   ],
   encapsulation: ViewEncapsulation.None
 })
@@ -20,7 +19,7 @@ export class EditorComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // const container = document.getElementById('editor');
+    console.log('ngAfterView Editor');
     const editor = new Quill(this.el.nativeElement.querySelector('#editor'),
       { theme: 'snow' }
     );
