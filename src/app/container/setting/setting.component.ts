@@ -28,10 +28,10 @@ export class SettingComponent implements OnInit {
     }
   }
 
-  // @HostListener('click', ['$event'])
-  // onWindowClick(event) {
-  //   this.router.navigate(['news']);
-  // }
+  @HostListener('click', ['$event'])
+  onWindowClick(event) {
+    this.router.navigate(['news']);
+  }
 
   constructor(private router: Router,
               private el: ElementRef) {

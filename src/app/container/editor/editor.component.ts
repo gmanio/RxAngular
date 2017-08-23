@@ -16,6 +16,7 @@ export class EditorComponent implements AfterViewInit, OnDestroy {
 
   constructor(private router: Router,
               private el: ElementRef) {
+
   }
 
   ngAfterViewInit(): void {

@@ -1,5 +1,8 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs/Subject';
+
+declare var PerformanceObserver;
 
 @Component({
   templateUrl: './home.component.html',
@@ -14,10 +17,10 @@ export class HomeComponent implements AfterViewInit {
   }
 
   constructor(private router: Router) {
+    const sub = new Subject();
   }
 
   ngAfterViewInit(): void {
-    console.log('AfterViewInit');
   }
 
   animationDone($event) {

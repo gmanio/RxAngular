@@ -6,7 +6,8 @@ export const RootRouter = RouterModule.forRoot(
     { path: 'home', loadChildren: './container/home/home.module#HomeModule' },
     { path: 'setting', loadChildren: './container/setting/setting.module#SettingModule' },
     { path: 'news', loadChildren: './container/news/news.module#NewsModule' },
-    { path: 'editor', loadChildren: './container/editor/editor.module#EditorModule' }
+    { path: 'editor', loadChildren: './container/editor/editor.module#EditorModule' },
+    { path: 'slack', loadChildren: './container/slack/slack.module#SlackModule' }
   ],
 
   /**
