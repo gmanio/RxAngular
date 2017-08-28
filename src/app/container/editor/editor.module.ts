@@ -12,4 +12,5 @@ import { EditorRouter } from './editor.routes';
     EditorComponent
   ]
 })
-export class EditorModule { }
+export class EditorModule {
+}

@@ -1,5 +1,6 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PopupService } from '../../service/popup.service';
 
 @Component({
   selector: 'app-setting',
@@ -7,7 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./setting.component.css']
 })
 
-export class SettingComponent implements OnInit {
+export class SettingComponent implements OnInit, AfterViewInit {
+
+
   hoverTab(event) {
     if ( event ) {
       const elTarget = event.currentTarget;
@@ -35,6 +38,9 @@ export class SettingComponent implements OnInit {
 
   constructor(private router: Router,
               private el: ElementRef) {
+  }
+
+  ngAfterViewInit(): void {
   }
 
   ngOnInit() {

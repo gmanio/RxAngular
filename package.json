@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 -p 5002 --disable-host-check=true",
+    "start": "ng serve --host 0.0.0.0 -p 4200 --disable-host-check=true",
     "deploy": "firebase deploy",
     "aot": "ng build --aot --prod --build-optimizer -sourcemap",
     "build": "ng build",

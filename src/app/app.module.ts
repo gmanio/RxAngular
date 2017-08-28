@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { RootRouter } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
+import { PopupModule } from './container/popup/popup.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpClientModule,
+    PopupModule,
     RootRouter,
     StoreModule.forRoot({}),
   ],

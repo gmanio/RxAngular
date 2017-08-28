@@ -1,6 +1,7 @@
 import * as Quill from 'quill';
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { PopupService } from '../../service/popup.service';
 
 @Component({
   selector: 'app-editor',
