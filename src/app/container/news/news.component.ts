@@ -24,7 +24,7 @@ export interface FeedItem {
 })
 
 export class NewsComponent implements OnInit, AfterViewInit {
-  public responseData: Observable<FeedItem>;
+  public responseData: Observable<any>;
   public sr: any;
 
   constructor(private router: Router,

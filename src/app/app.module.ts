@@ -6,10 +6,12 @@ import { RootRouter } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { PopupModule } from './container/popup/popup.module';
 import { CommonModule } from '@angular/common';
+import { PopupContainerComponent } from './container/popup/popup-container/popup-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PopupContainerComponent
   ],
   imports: [
     BrowserModule,

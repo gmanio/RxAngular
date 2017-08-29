@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as slack from 'slack';
 import * as Swiper from './swiper.min.js';
 import { Router } from '@angular/router';
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   selector: 'app-slack',
   templateUrl: './slack.component.html',
   styleUrls: ['/slack.component.css'],
-  // encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 
 export class SlackComponent implements OnInit, AfterViewInit {
