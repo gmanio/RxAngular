@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { PopupModule } from './container/popup/popup.module';
 import { CommonModule } from '@angular/common';
 import { PopupContainerComponent } from './container/popup/popup-container/popup-container.component';
+import { HomeModule } from './container/home/home.module';
+import { RouteReuseStrategy } from '@angular/router';
+import { CustomReuseService } from './router-reuse';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,14 @@ import { PopupContainerComponent } from './container/popup/popup-container/popup
     BrowserModule,
     CommonModule,
     HttpClientModule,
+    HomeModule,
     PopupModule,
     RootRouter,
     StoreModule.forRoot({}),
   ],
-  providers: [],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: CustomReuseService }
+  ],
   bootstrap: [AppComponent]
 })
 
